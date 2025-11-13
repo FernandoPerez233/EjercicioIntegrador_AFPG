@@ -18,7 +18,7 @@
         <br>
         *Todos nuestros paquetes tienen una vigencia de 6 meses a partir de la primera consulta
         </font><br><br><br>
-		<form> 
+		<form id="Calcular">  
 		<table  width="100%">
 		  <tr bgcolor="#FFE4C4"  align="center">
                 <td ><font size="4" color="FFFFFF"><b>Consulta online o presencial</b></font></td>
@@ -27,25 +27,25 @@
           </tr>    
           <tr>
             <td>
-		        <input type="radio" ><font color="grey">Primera Consulta $850 MXN<br>
-				<input type="radio">Seguimiento  $700 MXN<br>
-				<input type="radio">Paquete de 3 Consultas  $2,000 MXN<br>
-				<input type="radio" >Paquete  pareja  $5,000 MXN<br>
+		        <input type="radio" name="tipo" value="primerconsulta"><font color="grey">Primera Consulta $850 MXN<br>
+				<input type="radio" name="tipo" value="seguimiento">Seguimiento  $700 MXN<br>
+				<input type="radio" name="tipo" value="paquetetres">Paquete de 3 Consultas  $2,000 MXN<br>
+				<input type="radio" name="tipo" value="paquetepareja" >Paquete  pareja  $5,000 MXN<br>
                 </font>
             </td>
             <td>
               
-			  <select>
-				<option><font color="grey">Análisis de Composición corporal Sin consulta +  $200</font></option>
-				<option><font color="grey">Análisis de Composición corporal con consulta +  $1000</font></option>
+			  <select >
+				<option name="analisis" id="analisis" value="200"<font color="grey">Análisis de Composición corporal Sin consulta +  $200</font></option>
+				<option name="analisis" id="analisis" value="1000"><font color="grey">Análisis de Composición corporal con consulta +  $1000</font></option>
 			  </select>
                 
 			</td>
 			<td>
 			   <font color="grey">
-		        <input type="checkbox">Recetas $1,000<br>
-				<input type="checkbox">Ejercicios  $1,000<br>
-				<input type="checkbox">Revista semanal $150<br>
+		        <input type="checkbox" name="dinamica" id="receta" value="receta">Recetas $1,000<br>
+				<input type="checkbox" name="dinamica" id="ejercicios" value="ejercicios">Ejercicios  $1,000<br>
+				<input type="checkbox" name="dinamica" id="revista" value="revista">Revista semanal $150<br>
                 </font>
 			</td>
 		</tr>	
@@ -68,9 +68,9 @@
 		   </td>
            <td>
 			  <select >
-				<option>Efectivo  +0%</option>
-				<option>Tarjeta de Credito o Debito +6%</option>
-				<option>Transferencia Electronica + 3%</option>
+				<option name="tipodepago" id="efectivo">Efectivo  +0%</option>
+				<option name="tipodepago" id="tarjetacod">Tarjeta de Credito o Debito +6%</option>
+				<option name="tipodepago" id="transferencia">Transferencia Electronica + 3%</option>
 			   </select>
 			</td>	  
             <td>
@@ -80,6 +80,7 @@
 		</table>	
         <hr color="black">
         <div id="total" class="total"></div>
+        <button> Total a pagar</button>
 	   </form>
 	</body>
 </html>
