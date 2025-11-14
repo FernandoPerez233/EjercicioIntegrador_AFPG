@@ -21,15 +21,15 @@ function CalcularTotal(){
         alert("Seleccione un tipo de consulta");
     }
 
-    var analisis = document.querySelector('analisis').checked;
+    var analisis = document.getElementById('analisis').value;
 
     if(analisis == "ACCsinconsulta"){
         total += 200;
     }
-    else if(analisis == "ACCconconsulta"){
+    else if(analisis == "ACCconsulta"){
         total += 1000;
     }
 
     document.getElementById("total").innerHTML = "Total: $ " + total;
-    alert("El total a pagar es: $ " + total);
+    
 }
