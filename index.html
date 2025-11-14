@@ -4,8 +4,8 @@
 	</head>
 	<body bgcolor="#FFFFFF">
 		
-		<img src="redes.png" width=100%><br>
-        <img src="logo.png" width=100%> 
+		<img src="img/redes.png" width=100%><br>
+        <img src="img/logo.png" width=100%> 
 		<br>
 		<font color="#FFE4C4" size=5> <b>Servicios </b></font>
         <font color="grey">
@@ -27,32 +27,32 @@
           </tr>    
           <tr>
             <td>
-		        <input type="radio" name="tipo" id="primerconsulta" value="850"><font color="grey">Primera Consulta $850 MXN<br>
-				<input type="radio" name="tipo" id="seguimiento" value="700">Seguimiento  $700 MXN<br>
-				<input type="radio" name="tipo" id="paquetetres" value="2000">Paquete de 3 Consultas  $2,000 MXN<br>
-				<input type="radio" name="tipo" id="paquetepareja" value="5000">Paquete  pareja  $5,000 MXN<br>
+		        <input type="radio" name="tipo" id="primerconsulta" value="primerconsulta"><font color="grey">Primera Consulta $850 MXN<br>
+				<input type="radio" name="tipo" id="seguimiento" value="seguimiento">Seguimiento  $700 MXN<br>
+				<input type="radio" name="tipo" id="paquetetres" value="paquetetres">Paquete de 3 Consultas  $2,000 MXN<br>
+				<input type="radio" name="tipo" id="paquetepareja" value="paquetepareja">Paquete  pareja  $5,000 MXN<br>
                 </font>
             </td>
             <td>
               
-			  <select >
-				<option name="analisis" id="ACCsinconsulta" value="200"<font color="grey">Análisis de Composición corporal Sin consulta +  $200</font></option>
-				<option name="analisis" id="ACCconsulta" value="1000"><font color="grey">Análisis de Composición corporal con consulta +  $1000</font></option>
+			  <select id="analisis" name="analisis">
+				<option  value="ACCsinconsulta"<font color="grey">Análisis de Composición corporal Sin consulta +  $200</font></option>
+				<option value="ACCconsulta"><font color="grey">Análisis de Composición corporal con consulta +  $1000</font></option>
 			  </select>
                 
 			</td>
 			<td>
 			   <font color="grey">
-		        <input type="checkbox" name="dinamica" id="receta" value="1000">Recetas $1,000<br>
-				<input type="checkbox" name="dinamica" id="ejercicios" value="1000">Ejercicios  $1,000<br>
-				<input type="checkbox" name="dinamica" id="revista" value="150">Revista semanal $150<br>
+		        <input type="checkbox" name="dinamica" id="receta" value="receta">Recetas $1,000<br>
+				<input type="checkbox" name="dinamica" id="ejercicios" value="ejercicios">Ejercicios  $1,000<br>
+				<input type="checkbox" name="dinamica" id="revista" value="revista">Revista semanal $150<br>
                 </font>
 			</td>
 		</tr>	
       </table>
       <table>
 		<tr align="center">
-          <img src="contacto.png" width=100%>   
+          <img src="img/footer.jpg" width=100%>   
         </tr>
       </table>
       <table  width="70%" align="center">
@@ -68,9 +68,9 @@
 		   </td>
            <td>
 			  <select >
-				<option name="tipodepago" id="efectivo">Efectivo  +0%</option>
-				<option name="tipodepago" id="tarjetacod">Tarjeta de Credito o Debito +6%</option>
-				<option name="tipodepago" id="transferencia">Transferencia Electronica + 3%</option>
+				<option name="tipodepago" id="efectivo" value="efectivo">Efectivo  +0%</option>
+				<option name="tipodepago" id="tarjetacod" value="tarjetacod">Tarjeta de Credito o Debito +6%</option>
+				<option name="tipodepago" id="transferencia" value="transferencia">Transferencia Electronica + 3%</option>
 			   </select>
 			</td>	  
             <td>
@@ -79,8 +79,12 @@
           </tr>			
 		</table>	
         <hr color="black">
-        <div id="total" class="total"></div>
-        <button> Total a pagar</button>
+
+        <div id="total" class="total"> Total: $ </div>
+        <button type="button" onclick="CalcularTotal()"> Total a pagar</button>
+
 	   </form>
+
+	<script src="script.js"></script>   
 	</body>
 </html>
